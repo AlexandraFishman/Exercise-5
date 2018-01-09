@@ -1,5 +1,6 @@
 package ex5;
 
+//package Lesson9_FTPServer.src;
 
 /*
  * To change this template, choose Tools | Templates
@@ -37,7 +38,8 @@ public class FileServer {
                      
                      //send file
                      //File myFile = new File ("c:\\original.txt");
-                     File myFile = new File ("original.txt");
+                     //File myFile = new File ("original.txt");
+                     File myFile = new File ("C:/Users/Alex Fishman/Desktop/test.txt");
                      byte [] mybytearray = new byte [(int)myFile.length()];
                      
                      FileInputStream fis = new FileInputStream(myFile);

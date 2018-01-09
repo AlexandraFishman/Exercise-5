@@ -1,14 +1,15 @@
 package ex5;
 
+//package Lesson9_FTPClient.src;
 
-/*
+/**
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 
 /**
  *
- * @author annaf
+ * @author anna
  */
 import java.net.*;
 import java.io.*;
@@ -31,7 +32,7 @@ public class FileClient {
             byte [] mybytearray = new byte [filesize];
             InputStream is = socket.getInputStream();
             
-            FileOutputStream fos = new FileOutputStream ("copy_original.txt");
+            FileOutputStream fos = new FileOutputStream ("C:/Users/Alex Fishman/Desktop/copy_test.txt");
             
             BufferedOutputStream bos = new BufferedOutputStream(fos);
             
@@ -47,14 +48,14 @@ public class FileClient {
             bos.flush();
             
             long end = System.currentTimeMillis();
-            System.out.println("Time for copping file: " + (end-start) + " ms");
+            System.out.println("Time for coppying file: " + (end-start) + " ms");
             
         } catch (UnknownHostException e) {
             System.err.println("Don't know about host" + "127.0.0.1");
             System.exit(1);
         } catch (IOException e) {
             System.err.println("Couldn't get I/O for "
-                               + "the connection to host" + "127.0.0.1");
+                               + "the connection to host " + "127.0.0.1");
             //System.exit(1);
         }
       socket.close();
